@@ -1,0 +1,14 @@
+{
+  "AP": {
+    "source_path": "/kaggle/working/CXR_Clinical_AI/artifacts/models/module1_paper/ap/ap_densenet_resnet_best.pth",
+    "export_path": "/kaggle/working/CXR_Clinical_AI/artifacts/exports/module1_portable/checkpoints/ap_densenet121_best.pth",
+    "size_bytes": 28490401,
+    "sha256": "39c0e61121a35e78044933be6720a2a816754e23b74d790084f19c2c1ce41b40"
+  },
+  "Lateral": {
+    "source_path": "/kaggle/working/CXR_Clinical_AI/artifacts/models/module1_paper/weighted_bce/lateral_resnet50_weighted_best.pth",
+    "export_path": "/kaggle/working/CXR_Clinical_AI/artifacts/exports/module1_portable/checkpoints/lateral_resnet50_weighted_best.pth",
+    "size_bytes": 282916776,
+    "sha256": "751abe4daca1576308f2b1d1e728661eee13ddc2dca9acdf1bd08f9fe3f3c1b1"
+  }
+}

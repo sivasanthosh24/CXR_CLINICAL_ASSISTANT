@@ -1,0 +1,16 @@
+{
+  "package": "Module2_V2_Deployment_Assets",
+  "module": "Module 2 V2",
+  "purpose": "Deployment assets only",
+  "inference_code_included": false,
+  "training_code_included": false,
+  "ollama_included": false,
+  "module1_included": false,
+  "module3_included": false,
+  "checkpoint": "checkpoints/module2_v2_best.pt",
+  "tokenizer_directory": "tokenizer",
+  "configuration": "config/module2_config.json",
+  "evaluation_directory": "evaluation",
+  "source": "Kaggle /kaggle/working/Module2_V2_Final_Package",
+  "status": "Assets frozen before inference-code integration"
+}

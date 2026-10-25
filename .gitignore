@@ -1,0 +1,28 @@
+# Python and virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local runtime data, uploaded or sample medical images, and generated outputs
+.runtime/
+outputs/
+sample_images/
+project_structure.txt
+
+# Large model checkpoints (GitHub rejects individual files over 100 MB)
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.safetensors
+
+# Local credentials and editor/OS files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+config/secrets.toml
+.vscode/
+.DS_Store
+Thumbs.db

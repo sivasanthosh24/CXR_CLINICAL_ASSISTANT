@@ -1,0 +1,75 @@
+{
+    "module": "Module 2",
+    "version": "V2",
+    "task": "Chest X-ray clinical report generation",
+    "input": {
+        "type": "chest_xray",
+        "channels": 3,
+        "image_size": 224
+    },
+    "visual_encoder": {
+        "model_id": "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+        "architecture": "Vision Transformer",
+        "image_size": 224,
+        "patch_size": 16,
+        "hidden_size": 768,
+        "patch_tokens": 196,
+        "total_tokens": 197,
+        "trainable_parameters": 22444800,
+        "frozen_parameters": 64928256,
+        "normalization": {
+            "mean": [
+                0.48145466,
+                0.4578275,
+                0.40821073
+            ],
+            "std": [
+                0.26862954,
+                0.26130258,
+                0.27577711
+            ]
+        }
+    },
+    "decoder": {
+        "base_model": "gpt2",
+        "hidden_size": 768,
+        "layers": 12,
+        "attention_heads": 12,
+        "cross_attention": true,
+        "trainable_parameters": 29306880,
+        "lora": {
+            "enabled": true,
+            "rank": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "bias": "none",
+            "task_type": "CAUSAL_LM"
+        }
+    },
+    "total_trainable_parameters": 51751680,
+    "generation": {
+        "seed": "Findings:",
+        "max_new_tokens": 96,
+        "min_new_tokens": 12,
+        "no_repeat_ngram_size": 3,
+        "decoding": "greedy"
+    },
+    "tokenizer": {
+        "vocab_size": 50257,
+        "eos_token_id": 50256,
+        "pad_token_id": 50256,
+        "padding_side": "left"
+    },
+    "checkpoint": {
+        "file": "checkpoints/module2_v2_best.pt",
+        "best_epoch": 5
+    },
+    "deployment": {
+        "module1_dependency": false,
+        "module3_dependency": false,
+        "ollama_dependency": false,
+        "standalone_module": true,
+        "orchestrator": "External Ollama controller"
+    },
+    "clinical_status": "Research prototype. Not an autonomous clinical reporting system."
+}

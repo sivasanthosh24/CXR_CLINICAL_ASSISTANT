@@ -1,0 +1,48 @@
+{
+  "project": "CXR Clinical AI",
+  "module": "Module 1.1",
+  "task": "Chest X-ray View Classification",
+  "architecture": "DenseNet121",
+  "pretrained": "ImageNet",
+  "num_classes": 2,
+  "class_names": [
+    "AP",
+    "Lateral"
+  ],
+  "class_to_index": {
+    "AP": 0,
+    "Lateral": 1
+  },
+  "image_size": 224,
+  "input_channels": 3,
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "augmentation": {
+    "resize": [
+      224,
+      224
+    ],
+    "horizontal_flip": 0.5,
+    "rotation_degrees": 7,
+    "brightness": 0.1,
+    "contrast": 0.1
+  },
+  "loss": "Weighted Cross Entropy",
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "best_epoch": 1,
+  "best_validation_f1": 0.9993334664885916,
+  "seed": 42,
+  "pa_used": false
+}

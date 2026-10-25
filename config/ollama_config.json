@@ -1,0 +1,9 @@
+{
+  "host": "http://localhost:11434",
+  "model": "phi3:latest",
+  "timeout": 120,
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "stream": false,
+  "keep_alive": "5m"
+}

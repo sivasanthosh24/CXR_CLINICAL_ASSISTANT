@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "assistant_name": "CXR Clinical Assistant",
+  "allowed_sources": [
+    "view_classification",
+    "module1_prediction",
+    "gradcam",
+    "weak_localization",
+    "module2_narrative"
+  ],
+  "require_module_evidence": true,
+  "allow_external_knowledge": false,
+  "allow_raw_image_analysis": false,
+  "allow_medication_advice": false,
+  "allow_treatment_recommendations": false,
+  "allow_independent_diagnosis": false,
+  "max_question_length": 1000,
+  "max_response_length": 512,
+  "temperature": 0.0,
+  "logging": {
+    "enabled": true,
+    "directory": "outputs/chatbot",
+    "save_prompts": false,
+    "save_responses": true,
+    "save_guardrail_results": true
+  }
+}
